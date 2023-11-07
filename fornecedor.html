@@ -250,26 +250,109 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <input type="hidden" value="" id="alterar-id" />
                     <div class="row">
                         <div class="col">
-                            <label for="inserir-nome" class="form-label">Informe o nome do cliente:</label>
-                            <input type="text" id="inserir-nome" class="form-control" />
+                            <label for="alterar-nome" class="form-label">CNPJ:</label>
+                            <input type="text" id="alterar-nome" class="form-control" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="inserir-email" class="form-label">Informe o email do cliente:</label>
-                            <input type="text" id="inserir-email" class="form-control" />
+                            <label for="alterar-email" class="form-label">Nome Fantasia:</label>
+                            <input type="text" id="alterar-email" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-email" class="form-label">Razão social:</label>
+                            <input type="text" id="alterar-email" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-email" class="form-label">Rua:</label>
+                            <input type="text" id="alterar-email" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-email" class="form-label">Bairro:</label>
+                            <input type="text" id="alterar-email" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-email" class="form-label">Numero:</label>
+                            <input type="text" id="alterar-email" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-email" class="form-label">Cidade:</label>
+                            <input type="text" id="alterar-email" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-email" class="form-label">estado:</label>
+                            <input type="text" id="alterar-email" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-email" class="form-label">Email:</label>
+                            <input type="text" id="alterar-email" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-email" class="form-label">Telefone:</label>
+                            <input type="text" id="alterar-email" class="form-control" />
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        id="btnAlterarCliente">Salvar</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toastAlterarSucesso" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <span class="material-symbols-outlined">
+                    check_circle
+                </span>
+                <strong class="me-auto">Resposta</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <p>Registro alterado com sucesso!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toastAlterarErro" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <span class="material-symbols-outlined">
+                    error
+                </span>
+                <strong class="me-auto">Resposta</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <p>Erro ao alterar o registro!</p>
+            </div>
+        </div>
+    </div>
+    <!-- ====== FIM DO ALTERAR REGISTRO ====== -->
+    
+    <!-- ====== COMEÇO DO INSERIR REGISTRO ====== -->
     <div class="modal fade" id="excluirModal" tabindex="-1" aria-labelledby="excluirModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -280,14 +363,62 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col">
-                            <p>Nome do cliente:</p>
-                            <p id="consultar-nome">Nome</p>
+                            <p>CNPJ:</p>
+                            <p id="consultar-cnpj">CNPJ</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Email do cliente:</p>
-                            <p id="consultar-email">Email</p>
+                            <p>Nome Fantasia:</p>
+                            <p id="consultar-nome">Nome Fantasia</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>Razão social:</p>
+                            <p id="consultar-social">Razão social</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>Rua:</p>
+                            <p id="consultar-rua">Rua</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>Bairro:</p>
+                            <p id="consultar-bairro">bairro</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>Numero:</p>
+                            <p id="consultar-bairro">Numero</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>cidade:</p>
+                            <p id="consultar-cidade">cidade</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>estado:</p>
+                            <p id="consultar-estado">estado</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>email:</p>
+                            <p id="consultar-email">email</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>telefone:</p>
+                            <p id="consultar-telefone">telefone</p>
                         </div>
                     </div>
                     <div class="d-flex justify-content-end">
@@ -301,18 +432,44 @@
             </div>
         </div>
     </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toastExcluirSucesso" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <span class="material-symbols-outlined">
+                    check_circle
+                </span>
+                <strong class="me-auto">Resposta</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <p>Registro excluído com sucesso!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toastExcluirErro" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <span class="material-symbols-outlined">
+                    error
+                </span>
+                <strong class="me-auto">Resposta</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <p>Erro ao excluir o registro!</p>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
-    <script>
-        let table = new DataTable('#tabela');
-    </script>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-        import { getFirestore, addDoc, collection, query, where, getDocs, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+        import { getFirestore, addDoc, collection, query, where, getDocs, doc, getDoc,updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
         const firebaseConfig = {
             apiKey: "AIzaSyDwQn1-W8hPSlc8kIadG6QAWec16C5bgK0",
             authDomain: "app-yan-js.firebaseapp.com",
@@ -350,22 +507,9 @@
 
                 const toast = new bootstrap.Toast(document.querySelector("#toastInserirSucesso"));
                 toast.show();
-                table.row.add([
-                    cnpj, nome, social,  
-                    `<button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
-                            data-bs-target="#consultarModal">
-                            Consultar
-                        </button>
-                        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
-                            data-bs-target="#alterarModal">
-                            Alterar
-                        </button>
-                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
-                            data-bs-target="#excluirModal">
-                            Excluir
-                        </button>`
-                ]).draw(false);
-                table.column(0).data().sort();
+                table.rows().remove().draw();
+                table.destroy();
+                carregarDados();
             } catch (e) {
                 const toast = new bootstrap.Toast(document.querySelector("#toastInserirErro"));
                 toast.show();
@@ -381,7 +525,52 @@
             document.querySelector('#inserir-telefone').value = "";
         }
 
+        async function alterarFornecedorBD(){
+            let id = document.getElementById("alterar-id").value;
+            let valor_cnpj = document.getElementById("alterar-cnpj").value;
+            let valor_nome = document.getElementById("alterar-nome").value;
+            let valor_social = document.getElementById("alterar-social").value;
+            let valor_rua = document.getElementById("alterar-rua").value;
+            let valor_numero = document.getElementById("alterar-numero").value;
+            let valor_cidade = document.getElementById("alterar-cidade").value;
+            let valor_estado = document.getElementById("alterar-estado").value;
+            let valor_email = document.getElementById("alterar-email").value;
+            let valor_telefone = document.getElementById("alterar-telefone").value;
+            try{
+                let cliente = doc(db, "cliente", id);
+                await updateDoc(cliente, {nome: valor_nome, email: valor_email} );
+                const toast = new bootstrap.Toast(document.getElementById("toastAlterarSucesso"));
+                toast.show();
+                table.rows().remove().draw();
+                table.destroy();
+                carregarDados();
+            } catch (e){
+                const toast = new bootstrap.Toast(document.getElementById("toastAlterarErro"));
+                toast.show();
+            }
+        }
+
+        async function excluirFornecedorBD(){
+            let id = document.getElementById("excluir-id").value;
+            try{
+                await deleteDoc(doc(db, "Fornecedor", id));
+                const toast = new bootstrap.Toast(document.getElementById("toastExcluirSucesso"));
+                toast.show();
+                table.rows().remove().draw();
+                table.destroy();
+                carregarDados();
+            } catch (e){
+                const toast = new bootstrap.Toast(document.getElementById("toastExcluirErro"));
+                toast.show();
+            }
+        }
+
         async function carregarDados() {
+             table = new DataTable('#tabela', {
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/pt-BR.json',
+                },
+            });
             const q = query(collection(db, "Fornecedor"));
             const resultado = await getDocs(q);
             resultado.forEach(
@@ -409,10 +598,16 @@
                         .sort();
                 }
             );
+
             const btnsConsultar = Array.from(document.getElementsByClassName("btn-outline-info"));
             btnsConsultar.forEach(btn => {
-                btn.addEventListener('click', consultarFornecedor);
-            });
+            btn.addEventListener('click', consultarFornecedor); });
+
+            const btnAlterar = Array.from(document.getElementsByClassName('btn-outline-warning'));
+            btnAlterar.forEach(btn => { btn.addEventListener('click', alterarFornecedorBD) });
+
+            const btnExcluir = Array.from(document.getElementsByClassName('btn-outline-danger'));
+            btnExcluir.forEach(btn => { btn.addEventListener('click', excluirFornecedorBD) });
         }
 
         async function consultarFornecedor() {
@@ -433,7 +628,47 @@
             }
         }
 
+         async function alterarFornecedor(){
+            let id = this.value;
+            const consulta = doc(db, "Fornecedor", id);
+            const resultado = await getDoc(consulta);
+            if (resultado.exists()){
+                document.getElementById("alterar-id").value = id;
+                document.getElementById("alterar-nome").value = resultado.data().nome;
+                document.getElementById("alterar-social").value = resultado.data().social;
+                document.getElementById("alterar-rua").value = resultado.data().rua;
+                document.getElementById("alterar-bairro").value = resultado.data().bairro;
+                document.getElementById("alterar-numero").value = resultado.data().numero;
+                document.getElementById("alterar-cidade").value = resultado.data().cidade;
+                document.getElementById("alterar-estado").value = resultado.data().estado;
+                document.getElementById("alterar-email").value = resultado.data().email;
+                document.getElementById("alterar-telefone").value = resultado.data().telefone;
+            }
+        }
+
+         async function excluirFornecedor(){
+            let id = this.value;
+            const consulta = doc(db, "Fornecedor", id);
+            const resultado = await getDoc(consulta);
+            if (resultado.exists()){
+                document.getElementById("excluir-id").value = id;
+                 document.getElementById("alterar-nome").innerHTML = resultado.data().nome;
+                document.getElementById("alterar-social").innerHTML = resultado.data().social;
+                document.getElementById("alterar-rua").innerHTML = resultado.data().rua;
+                document.getElementById("alterar-bairro").innerHTML = resultado.data().bairro;
+                document.getElementById("alterar-numero").innerHTML = resultado.data().numero;
+                document.getElementById("alterar-cidade").innerHTML = resultado.data().cidade;
+                document.getElementById("alterar-estado").innerHTML = resultado.data().estado;
+                document.getElementById("alterar-email").innerHTML = resultado.data().email;
+                document.getElementById("alterar-telefone").innerHTML = resultado.data().telefone;
+            }
+        }
+
+        var table;
+
         document.querySelector("#btnInserirFornecedor").addEventListener("click", btnInserirFornecedor);
+        document.querySelector("#btnAlterarFornecedor").addEventListener("click", alterarFornecedor);
+        document.addEventListener("#btnExcluirFornecedor").addEventListener("click", excluirFornecedor);
         document.addEventListener("DOMContentLoaded", function (e) {
             carregarDados();
         });
