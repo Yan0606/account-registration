@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="utf-8">
@@ -31,23 +31,25 @@
                             Funções Básicas
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="./fornecedor.html">Fornecedor</a></li>
-                            <li><a class="dropdown-item" href="./index.html">Cliente</a></li>
-                            <li><a class="dropdown-item" href="./produto.html">Produtos</a></li>
+                            <li><a class="dropdown-item" href="index.html">Clientes</a></li>
+                            <li><a class="dropdown-item" href="fornecedor.html">Fornecedor</a></li>
+                            <li><a class="dropdown-item" href="produto.html">Produtos</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <main class="container">
+
         <h3 class="mt-5">Gerenciamento de Fornecedor</h3>
         <hr />
+
         <button type="button" class="btn btn-outline-success mt-1 mb-4" data-bs-toggle="modal"
             data-bs-target="#inserirModal">
             Novo Registro
         </button>
+
         <table class="table table-striped table-hover mt-3" id="tabela">
             <thead class="table-light">
                 <tr>
@@ -55,13 +57,13 @@
                     <th scope="col">Nome Fantasia</th>
                     <th scope="col">Razão Social</th>
                     <th scope="col">Ação</th>
-
                 </tr>
             </thead>
             <tbody>
             </tbody>
         </table>
     </main>
+
     <div class="modal fade" id="inserirModal" tabindex="-1" aria-labelledby="inserirModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -78,58 +80,59 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="inserir-nomel" class="form-label">Informe o Nome Fantasia:</label>
+                            <label for="inserir-nome" class="form-label">Informe nome:</label>
                             <input type="text" id="inserir-nome" class="form-control" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="inserir-social" class="form-label">Informe a Razão Social:</label>
+                            <label for="inserir-social" class="form-label">Informe social:</label>
                             <input type="text" id="inserir-social" class="form-control" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="inserir-rua" class="form-label">Informe a Rua:</label>
+                            <label for="inserir-rua" class="form-label">Informe rua:</label>
                             <input type="text" id="inserir-rua" class="form-control" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="inserir-bairro" class="form-label">Informe o Bairro:</label>
+                            <label for="inserir-bairro" class="form-label">Informe bairro:</label>
                             <input type="text" id="inserir-bairro" class="form-control" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="inserir-numero" class="form-label">Informe o número:</label>
+                            <label for="inserir-numero" class="form-label">Informe numero:</label>
                             <input type="text" id="inserir-numero" class="form-control" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="inserir-cidade" class="form-label">Informe a cidade:</label>
+                            <label for="inserir-cidade" class="form-label">Informe cidade:</label>
                             <input type="text" id="inserir-cidade" class="form-control" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="inserir-estado" class="form-label">Informe o estado:</label>
+                            <label for="inserir-estado" class="form-label">Informe estado:</label>
                             <input type="text" id="inserir-estado" class="form-control" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="inserir-email" class="form-label">Informe o email:</label>
+                            <label for="inserir-email" class="form-label">Informe email:</label>
                             <input type="text" id="inserir-email" class="form-control" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="inserir-telefone" class="form-label">Informe o telefone:</label>
+                            <label for="inserir-telefone" class="form-label">Informe telefone:</label>
                             <input type="text" id="inserir-telefone" class="form-control" />
                         </div>
                     </div>
+                    
                 </div>
                 <div class="modal-footer">
                     <button id="btnInserirFornecedor" type="button" class="btn btn-primary"
@@ -139,6 +142,7 @@
             </div>
         </div>
     </div>
+
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="toastInserirSucesso" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
@@ -153,6 +157,7 @@
             </div>
         </div>
     </div>
+
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="toastInserirErro" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
@@ -167,6 +172,7 @@
             </div>
         </div>
     </div>
+
     <div class="modal fade" id="consultarModal" tabindex="-1" aria-labelledby="consultarModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -183,56 +189,56 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Nome Fantasia:</p>
-                            <p id="consultar-nome">Nome Fantasia</p>
+                            <p>Nome:</p>
+                            <p id="consultar-nome">Nome</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Razão Social:</p>
-                            <p id="consultar-social">Razão Social </p>
+                            <p>Razão social:</p>
+                            <p id="consultar-social">social</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <p>Rua:</p>
-                            <p id="consultar-rua">Rua</p>
+                            <p id="consultar-rua">rua</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Bairro:</p>
-                            <p id="consultar-bairro">Bairro</p>
+                            <p>bairro:</p>
+                            <p id="consultar-bairro">bairro</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Numero:</p>
-                            <p id="consultar-numero">Numero</p>
+                            <p>numero:</p>
+                            <p id="consultar-numero">numero</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Cidade:</p>
-                            <p id="consultar-cidade">Cidade</p>
+                            <p>cidade:</p>
+                            <p id="consultar-cidade">cidade</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Estado:</p>
-                            <p id="consultar-estado">Estado</p>
+                            <p>estado:</p>
+                            <p id="consultar-estado">estado</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Email:</p>
-                            <p id="consultar-email">Email</p>
+                            <p>email:</p>
+                            <p id="consultar-email">email</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Telefone:</p>
-                            <p id="consultar-telefone">Telefone</p>
+                            <p>telefone:</p>
+                            <p id="consultar-telefone">telefone</p>
                         </div>
                     </div>
                 </div>
@@ -242,6 +248,7 @@
             </div>
         </div>
     </div>
+
     <div class="modal fade" id="alterarModal" tabindex="-1" aria-labelledby="alterarModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -253,68 +260,68 @@
                     <input type="hidden" value="" id="alterar-id" />
                     <div class="row">
                         <div class="col">
-                            <label for="alterar-nome" class="form-label">CNPJ:</label>
+                            <label for="alterar-cnpj" class="form-label">Informe o cnpj do Fornecedor:</label>
+                            <input type="text" id="alterar-cnpj" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-nome" class="form-label">Informe o nome do Fornecedor:</label>
                             <input type="text" id="alterar-nome" class="form-control" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="alterar-email" class="form-label">Nome Fantasia:</label>
+                            <label for="alterar-social" class="form-label">Informe o social do Fornecedor:</label>
+                            <input type="text" id="alterar-social" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-rua" class="form-label">Informe o rua do Fornecedor:</label>
+                            <input type="text" id="alterar-rua" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-bairro" class="form-label">Informe o bairro do Fornecedor:</label>
+                            <input type="text" id="alterar-bairro" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-numero" class="form-label">Informe o numero do Fornecedor:</label>
+                            <input type="text" id="alterar-numero" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-cidade" class="form-label">Informe o cidade do Fornecedor:</label>
+                            <input type="text" id="alterar-cidade" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-estado" class="form-label">Informe o estado do Fornecedor:</label>
+                            <input type="text" id="alterar-estado" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="alterar-email" class="form-label">Informe o email do Fornecedor:</label>
                             <input type="text" id="alterar-email" class="form-control" />
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="alterar-email" class="form-label">Razão social:</label>
-                            <input type="text" id="alterar-email" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="alterar-email" class="form-label">Rua:</label>
-                            <input type="text" id="alterar-email" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="alterar-email" class="form-label">Bairro:</label>
-                            <input type="text" id="alterar-email" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="alterar-email" class="form-label">Numero:</label>
-                            <input type="text" id="alterar-email" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="alterar-email" class="form-label">Cidade:</label>
-                            <input type="text" id="alterar-email" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="alterar-email" class="form-label">estado:</label>
-                            <input type="text" id="alterar-email" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="alterar-email" class="form-label">Email:</label>
-                            <input type="text" id="alterar-email" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="alterar-email" class="form-label">Telefone:</label>
-                            <input type="text" id="alterar-email" class="form-control" />
+                            <label for="alterar-telefone" class="form-label">Informe o telefone do Fornecedor:</label>
+                            <input type="text" id="alterar-telefone" class="form-control" />
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                        id="btnAlterarCliente">Salvar</button>
+                        id="btnAlterarFornecedor">Salvar</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
@@ -350,9 +357,7 @@
             </div>
         </div>
     </div>
-    <!-- ====== FIM DO ALTERAR REGISTRO ====== -->
-    
-    <!-- ====== COMEÇO DO INSERIR REGISTRO ====== -->
+
     <div class="modal fade" id="excluirModal" tabindex="-1" aria-labelledby="excluirModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -361,64 +366,65 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <input type="hidden" value="" id="excluir-id" />
                     <div class="row">
                         <div class="col">
-                            <p>CNPJ:</p>
-                            <p id="consultar-cnpj">CNPJ</p>
+                            <p>cnpj do Fornecedor:</p>
+                            <p id="excluir-cnpj">cnpj</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Nome Fantasia:</p>
-                            <p id="consultar-nome">Nome Fantasia</p>
+                            <p>nome do Fornecedor:</p>
+                            <p id="excluir-nome">nome</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Razão social:</p>
-                            <p id="consultar-social">Razão social</p>
+                            <p>social do Fornecedor:</p>
+                            <p id="excluir-social">social</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Rua:</p>
-                            <p id="consultar-rua">Rua</p>
+                            <p>rua do Fornecedor:</p>
+                            <p id="excluir-rua">rua</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Bairro:</p>
-                            <p id="consultar-bairro">bairro</p>
+                            <p>bairro do Fornecedor:</p>
+                            <p id="excluir-bairro">bairro</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Numero:</p>
-                            <p id="consultar-bairro">Numero</p>
+                            <p>numero do Fornecedor:</p>
+                            <p id="excluir-numero">numero</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>cidade:</p>
-                            <p id="consultar-cidade">cidade</p>
+                            <p>cidade do Fornecedor:</p>
+                            <p id="excluir-cidade">cidade</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>estado:</p>
-                            <p id="consultar-estado">estado</p>
+                            <p>estado do Fornecedor:</p>
+                            <p id="excluir-estado">estado</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>email:</p>
-                            <p id="consultar-email">email</p>
+                            <p>email do Fornecedor:</p>
+                            <p id="excluir-email">email</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>telefone:</p>
-                            <p id="consultar-telefone">telefone</p>
+                            <p>telefone do Fornecedor:</p>
+                            <p id="excluir-social">social</p>
                         </div>
                     </div>
                     <div class="d-flex justify-content-end">
@@ -426,12 +432,13 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Sim</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="btnExcluirFornecedor">Sim</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="toastExcluirSucesso" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
@@ -461,15 +468,18 @@
             </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-        import { getFirestore, addDoc, collection, query, where, getDocs, doc, getDoc,updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+        import { getFirestore, addDoc, collection, query, where, getDocs, doc, getDoc, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+
         const firebaseConfig = {
             apiKey: "AIzaSyDwQn1-W8hPSlc8kIadG6QAWec16C5bgK0",
             authDomain: "app-yan-js.firebaseapp.com",
@@ -481,30 +491,31 @@
 
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
-        async function btnInserirFornecedor() {
-            let cnpj = document.querySelector("#inserir-cnpj").value;
-            let nome = document.querySelector("#inserir-nome").value;
-            let social = document.querySelector("#inserir-social").value;
-            let rua = document.querySelector("#inserir-rua").value;
-            let numero = document.querySelector("#inserir-numero").value;
-            let cidade = document.querySelector("#inserir-cidade").value;
-            let estado = document.querySelector("#inserir-estado").value;
-            let email = document.querySelector("#inserir-email").value;
-            let telefone = document.querySelector("#inserir-telefone").value;
 
+        async function inserirFornecedor() {
+            let valor_cnpj = document.querySelector('#inserir-cnpj').value;
+            let valor_nome = document.querySelector('#inserir-nome').value;
+            let valor_social = document.querySelector('#inserir-social').value;
+            let valor_rua = document.querySelector('#inserir-rua').value;
+            let valor_bairro = document.querySelector('#inserir-bairro').value;
+            let valor_numero = document.querySelector('#inserir-numero').value;
+            let valor_cidade = document.querySelector('#inserir-cidade').value;
+            let valor_estado = document.querySelector('#inserir-estado').value;
+            let valor_email = document.querySelector('#inserir-email').value;
+            let valor_telefone = document.querySelector('#inserir-telefone').value;
             try {
                 await addDoc(collection(db, "Fornecedor"), {
-                    cnpj: cnpj,
-                    nome: nome,
-                    social: social,
-                    rua: rua,
-                    numero: numero,
-                    cidade: cidade,
-                    estado: estado,
-                    email: email,
-                    telefone: telefone,
+                    cnpj: valor_cnpj,
+                    nome: valor_nome,
+                    social: valor_social,
+                    rua: valor_rua,
+                    bairro: valor_bairro,
+                    numero: valor_numero,
+                    cidade: valor_cidade,
+                    estado: valor_estado,
+                    email: valor_email,
+                    telefone: valor_telefone
                 });
-
                 const toast = new bootstrap.Toast(document.querySelector("#toastInserirSucesso"));
                 toast.show();
                 table.rows().remove().draw();
@@ -518,6 +529,7 @@
             document.querySelector('#inserir-nome').value = "";
             document.querySelector('#inserir-social').value = "";
             document.querySelector('#inserir-rua').value = "";
+            document.querySelector('#inserir-bairro').value = "";
             document.querySelector('#inserir-numero').value = "";
             document.querySelector('#inserir-cidade').value = "";
             document.querySelector('#inserir-estado').value = "";
@@ -531,14 +543,15 @@
             let valor_nome = document.getElementById("alterar-nome").value;
             let valor_social = document.getElementById("alterar-social").value;
             let valor_rua = document.getElementById("alterar-rua").value;
+            let valor_bairro = document.getElementById("alterar-bairro").value;
             let valor_numero = document.getElementById("alterar-numero").value;
             let valor_cidade = document.getElementById("alterar-cidade").value;
             let valor_estado = document.getElementById("alterar-estado").value;
             let valor_email = document.getElementById("alterar-email").value;
             let valor_telefone = document.getElementById("alterar-telefone").value;
             try{
-                let cliente = doc(db, "cliente", id);
-                await updateDoc(cliente, {nome: valor_nome, email: valor_email} );
+                let Fornecedor = doc(db, "Fornecedor", id);
+                await updateDoc(Fornecedor, {nome: valor_nome, email: valor_email} );
                 const toast = new bootstrap.Toast(document.getElementById("toastAlterarSucesso"));
                 toast.show();
                 table.rows().remove().draw();
@@ -566,7 +579,7 @@
         }
 
         async function carregarDados() {
-             table = new DataTable('#tabela', {
+            table = new DataTable('#tabela', {
                 language: {
                     url: 'https://cdn.datatables.net/plug-ins/1.13.6/i18n/pt-BR.json',
                 },
@@ -576,42 +589,35 @@
             resultado.forEach(
                 (dados) => {
                     table.row.add([
-                        dados.data().cnpj,
-                        dados.data().nome,
-                        dados.data().social,
-                        `<button value= "${dados.id}" type="button" class="btn btn-outline-info" data-bs-toggle="modal"
-                            data-bs-target="#consultarModal">
+                        dados.data().cnpj, dados.data().nome, dados.data().social,
+                        `<button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                            data-bs-target="#consultarModal" value="${dados.id}">
                             Consultar
                         </button>
-                        <button value= "${dados.id}" type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
-                            data-bs-target="#alterarModal">
+                        <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#alterarModal" value="${dados.id}">
                             Alterar
                         </button>
-                        <button value= "${dados.id}" type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
-                            data-bs-target="#excluirModal">
+                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                            data-bs-target="#excluirModal" value="${dados.id}">
                             Excluir
                         </button>`
-
                     ]).draw(false);
-                    table.column(0)
-                        .data()
-                        .sort();
+                    table.column(0).data().sort();
                 }
             );
-
-            const btnsConsultar = Array.from(document.getElementsByClassName("btn-outline-info"));
-            btnsConsultar.forEach(btn => {
-            btn.addEventListener('click', consultarFornecedor); });
+            const btnConsultar = Array.from(document.getElementsByClassName('btn-outline-info'));
+            btnConsultar.forEach(btn => { btn.addEventListener('click', consultarFornecedor) });
 
             const btnAlterar = Array.from(document.getElementsByClassName('btn-outline-warning'));
-            btnAlterar.forEach(btn => { btn.addEventListener('click', alterarFornecedorBD) });
+            btnAlterar.forEach(btn => { btn.addEventListener('click', alterarFornecedor) });
 
             const btnExcluir = Array.from(document.getElementsByClassName('btn-outline-danger'));
-            btnExcluir.forEach(btn => { btn.addEventListener('click', excluirFornecedorBD) });
+            btnExcluir.forEach(btn => { btn.addEventListener('click', excluirFornecedor) });
         }
 
         async function consultarFornecedor() {
-            const id = this.value;
+            let id = this.value;
             const consulta = doc(db, "Fornecedor", id);
             const resultado = await getDoc(consulta);
             if (resultado.exists()) {
@@ -628,12 +634,13 @@
             }
         }
 
-         async function alterarFornecedor(){
+        async function alterarFornecedor(){
             let id = this.value;
             const consulta = doc(db, "Fornecedor", id);
             const resultado = await getDoc(consulta);
             if (resultado.exists()){
                 document.getElementById("alterar-id").value = id;
+                document.getElementById("alterar-cnpj").value = resultado.data().cnpj;
                 document.getElementById("alterar-nome").value = resultado.data().nome;
                 document.getElementById("alterar-social").value = resultado.data().social;
                 document.getElementById("alterar-rua").value = resultado.data().rua;
@@ -646,32 +653,36 @@
             }
         }
 
-         async function excluirFornecedor(){
+        async function excluirFornecedor(){
             let id = this.value;
             const consulta = doc(db, "Fornecedor", id);
             const resultado = await getDoc(consulta);
             if (resultado.exists()){
                 document.getElementById("excluir-id").value = id;
-                 document.getElementById("alterar-nome").innerHTML = resultado.data().nome;
-                document.getElementById("alterar-social").innerHTML = resultado.data().social;
-                document.getElementById("alterar-rua").innerHTML = resultado.data().rua;
-                document.getElementById("alterar-bairro").innerHTML = resultado.data().bairro;
-                document.getElementById("alterar-numero").innerHTML = resultado.data().numero;
-                document.getElementById("alterar-cidade").innerHTML = resultado.data().cidade;
-                document.getElementById("alterar-estado").innerHTML = resultado.data().estado;
-                document.getElementById("alterar-email").innerHTML = resultado.data().email;
-                document.getElementById("alterar-telefone").innerHTML = resultado.data().telefone;
+                document.getElementById("excluir-cnpj").innerHTML = resultado.data().cnpj;
+                document.getElementById("excluir-nome").innerHTML = resultado.data().nome;
+                document.getElementById("excluir-social").innerHTML = resultado.data().social;
+                document.getElementById("excluir-rua").innerHTML = resultado.data().rua;
+                document.getElementById("excluir-bairro").innerHTML = resultado.data().bairro;
+                document.getElementById("excluir-numero").innerHTML = resultado.data().numero;
+                document.getElementById("excluir-cidade").innerHTML = resultado.data().cidade;
+                document.getElementById("excluir-estado").innerHTML = resultado.data().estado;
+                document.getElementById("excluir-email").innerHTML = resultado.data().email;
+                document.getElementById("excluir-telefone").innerHTML = resultado.data().telefone;
             }
         }
 
         var table;
 
-        document.querySelector("#btnInserirFornecedor").addEventListener("click", btnInserirFornecedor);
-        document.querySelector("#btnAlterarFornecedor").addEventListener("click", alterarFornecedor);
-        document.addEventListener("#btnExcluirFornecedor").addEventListener("click", excluirFornecedor);
+        document.querySelector("#btnInserirFornecedor").addEventListener("click", inserirFornecedor);
+        document.querySelector("#btnAlterarFornecedor").addEventListener("click", alterarFornecedorBD);
+        document.querySelector("#btnExcluirFornecedor").addEventListener("click", excluirFornecedorBD);
         document.addEventListener("DOMContentLoaded", function (e) {
             carregarDados();
         });
+
+
+
     </script>
 </body>
 
