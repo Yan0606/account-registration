@@ -551,7 +551,9 @@
             let valor_telefone = document.getElementById("alterar-telefone").value;
             try{
                 let Fornecedor = doc(db, "Fornecedor", id);
-                await updateDoc(Fornecedor, {nome: valor_nome, email: valor_email} );
+                await updateDoc(Fornecedor, {cnpj: valor_cnpj, nome: valor_nome, social: valor_social,
+                    rua: valor_rua, bairro: valor_bairro, numero: valor_numero, cidade: valor_cidade,
+                    estado: valor_estado, email: valor_email, telefone: valor_telefone,} );
                 const toast = new bootstrap.Toast(document.getElementById("toastAlterarSucesso"));
                 toast.show();
                 table.rows().remove().draw();
