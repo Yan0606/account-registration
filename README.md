@@ -1,4 +1,4 @@
-# Firebase + Vanilla JavaScript Project
+# Firebase + Vanilla JavaScript Project 🚀
 
 ## Overview
 
@@ -61,4 +61,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 Special thanks to the Firebase and JavaScript communities for their valuable resources and support.
 
-Happy coding! 🚀
+Happy coding! 🚀🔥
