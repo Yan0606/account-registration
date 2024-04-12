@@ -1,4 +1,4 @@
-# Firebase + Vanilla JavaScript Project 🚀
+# Firebase + JavaScript Project 🚀
 
 ## Overview
 
